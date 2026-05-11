@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideCARE</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <img th:src="@{/images/orangebearstudios_logo.png}" alt="Orange Bear Studios Logo">
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+
+        <a href="/about-us">About Us</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Apps</button>
+            <div class="dropdown-content">
+                <a href="/apps/ridecare">RideCARE</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="/games/thinkfast">ThinkFast!</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <section class="product-hero fade-in">
+        <div class="product-hero-image">
+            <img th:src="@{/images/ridecare-banner.png}" alt="RideCARE Banner">
+        </div>
+
+        <div class="product-hero-content">
+            <span class="product-tag">App</span>
+            <h1>RideCARE</h1>
+            <p>A smart vehicle management app designed to help you track expenses, maintenance, and important reminders in one place.</p>
+            <p>Coming soon on Google Play</p>
+        </div>
+    </section>
+
+    <section class="product-summary fade-in fade-in-delay-1">
+        <p>
+            RideCARE is a vehicle management app built to simplify how you track and maintain your car.
+            From logging expenses to managing service reminders, the app focuses on clarity, organization, and making everyday car management easier.
+        </p>
+    </section>
+    <br>
+    <section class="features-grid fade-in fade-in-delay-2">
+        <div class="feature-card">
+            <h3>Expense Tracking</h3>
+            <p>Log and organize all car-related expenses, including maintenance, repairs, and other costs, in a clear and structured way.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Smart Reminders</h3>
+            <p>Set reminders for services, inspections, and important dates so nothing is missed.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Fuel Tracking</h3>
+            <p>Track fuel usage and monitor efficiency over time with simple and consistent logging.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Organized History</h3>
+            <p>Access a complete history of your vehicle data, making it easy to review, update, and manage everything in one place.</p>
+        </div>
+    </section>
+
+    <section class="product-preview fade-in fade-in-delay-3">
+
+        <h2>Preview</h2>
+
+        <div class="preview-row">
+
+            <img th:src="@{/images/ridecare-preview1.jpg}" alt="RideCARE Screenshot 1">
+            <img th:src="@{/images/ridecare-preview2.jpg}" alt="RideCARE Screenshot 2">
+            <img th:src="@{/images/ridecare-preview3.jpg}" alt="RideCARE Screenshot 3">
+            <img th:src="@{/images/ridecare-preview4.jpg}" alt="RideCARE Screenshot 3">
+
+        </div>
+
+    </section>
+    <section class="product-footer-cta">
+        <h2>Take control of your car management</h2>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="footer-left">
+        <span>© 2026 Orange Bear Studios</span>
+    </div>
+
+    <div class="footer-right">
+        <span class="footer-label">Follow Us</span>
+
+        <a href="mailto:support@orangebearstudios.com" class="email-link">
+            <img class="social-icon mail-icon" th:src="@{/icons/email.svg}" alt="Email">
+            support@orangebearstudios.com
+        </a>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/orangebear_studios" aria-label="Instagram">
+                <img class="social-icon" th:src="@{/icons/instagram.svg}" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/orangebearstudios/" aria-label="Facebook">
+                <img class="social-icon" th:src="@{/icons/facebook.svg}" alt="Facebook">
+            </a>
+
+            <a href="https://bsky.app/profile/orangebearstudios.bsky.social" aria-label="Bluesky">
+                <img class="social-icon" th:src="@{/icons/bluesky.svg}" alt="Bluesky">
+            </a>
+
+            <a href="https://x.com/OrangeBearStud" aria-label="Twitter (X)">
+                <img class="social-icon" th:src="@{/icons/twitter_x.svg}" alt="Twitter (X)">
+            </a>
+
+            <a href="https://tiktok.com/@orange.bear.studios" aria-label="TikTok">
+                <img class="social-icon" th:src="@{/icons/tiktok.svg}" alt="TikTok">
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

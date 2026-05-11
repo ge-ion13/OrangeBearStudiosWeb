@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Orange Bear Studios</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <img th:src="@{/images/orangebearstudios_logo.png}" alt="Orange Bear Studios Logo">
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+
+        <a href="/about-us">About Us</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Apps</button>
+            <div class="dropdown-content">
+                <a href="/apps/ridecare">RideCARE</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="/games/thinkfast">ThinkFast!</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="page-content">
+
+    <section class="page-hero">
+        <h1>About Orange Bear Studios</h1>
+    </section>
+
+    <section class="about-summary">
+        <p> Orange Bear Studios is an independent software studio focused on creating thoughtful, and user-focused digital experiences.</p>
+        <br>
+        <p> Founded through a passion for creativity and independent development, the studio was built with a simple philosophy:
+            create products with purpose, attention to detail, and value.</p>
+        <br>
+        <p> Throughout the development process, the studio maintains full creative freedom,
+            and it allows ideas to evolve naturally from concept to release.</p>
+        <br>
+        <p> From mobile applications to interactive experiences, every project is approached with a strong emphasis on
+            quality, usability, and meaningful design.</p>
+
+    </section>
+
+    <section class="focus-grid">
+        <div class="focus-card">
+            <h3>Apps</h3>
+            <p>Useful apps built to solve everyday problems through clean design and practical functionality.</p>
+        </div>
+
+        <div class="focus-card">
+            <h3>Games</h3>
+            <p>Games designed to be accessible, engaging, and enjoyable for everyone.</p>
+        </div>
+
+        <div class="focus-card">
+            <h3>User Experience</h3>
+            <p>Every product is built with a strong focus on clarity, consistency, and user-friendly design.</p>
+        </div>
+    </section>
+
+    <section class="closing-note">
+        <p>More projects are in development, with future releases planned across both apps and games. Follow us on social media to find out more.</p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-left">
+        <span>© 2026 Orange Bear Studios</span>
+    </div>
+
+    <div class="footer-right">
+        <span class="footer-label">Follow Us</span>
+
+        <a href="mailto:support@orangebearstudios.com" class="email-link">
+            <img class="social-icon mail-icon" th:src="@{/icons/email.svg}" alt="Email">
+            support@orangebearstudios.com
+        </a>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/orangebear_studios" aria-label="Instagram">
+                <img class="social-icon" th:src="@{/icons/instagram.svg}" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/orangebearstudios/" aria-label="Facebook">
+                <img class="social-icon" th:src="@{/icons/facebook.svg}" alt="Facebook">
+            </a>
+
+            <a href="https://bsky.app/profile/orangebearstudios.bsky.social" aria-label="Bluesky">
+                <img class="social-icon" th:src="@{/icons/bluesky.svg}" alt="Bluesky">
+            </a>
+
+            <a href="https://x.com/OrangeBearStud" aria-label="Twitter (X)">
+                <img class="social-icon" th:src="@{/icons/twitter_x.svg}" alt="Twitter (X)">
+            </a>
+
+            <a href="https://tiktok.com/@orange.bear.studios" aria-label="TikTok">
+                <img class="social-icon" th:src="@{/icons/tiktok.svg}" alt="TikTok">
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

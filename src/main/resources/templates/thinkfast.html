@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThinkFast!</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <img th:src="@{/images/orangebearstudios_logo.png}" alt="Orange Bear Studios Logo">
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+
+        <a href="/about-us">About Us</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Apps</button>
+            <div class="dropdown-content">
+                <a href="/apps/ridecare">RideCARE</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="/games/thinkfast">ThinkFast!</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="product-page">
+
+    <section class="product-hero fade-in">
+        <div class="product-hero-image">
+            <img th:src="@{/images/thinkfast-banner.png}" alt="ThinkFast! Banner">
+        </div>
+
+        <div class="product-hero-content">
+            <span class="product-tag">Game</span>
+            <h1>ThinkFast!</h1>
+            <p>A fast-paced trivia challenge built for quick thinking, sharp instincts, and competitive play.</p>
+            <p>Coming soon on Google Play</p>
+        </div>
+    </section>
+
+    <section class="product-summary fade-in fade-in-delay-1">
+        <p>
+            ThinkFast! is a fast and competitive trivia experience designed around quick decision-making,
+            varied categories, and short-form challenge rounds that keep gameplay engaging and replayable.
+            Whether you're a casual quiz lover or a competitive trivia expert, ThinkFast! delivers a fun
+            and intense experience built around fast decisions, quick reactions, and rewarding progression.
+        </p>
+    </section>
+    <br>
+    <section class="features-grid fade-in fade-in-delay-2">
+        <div class="feature-card">
+            <h3>Fast-Paced Rounds</h3>
+            <p>Short and focused rounds built around quick reactions and fast decision-making.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Multiple Categories</h3>
+            <p>Test your knowledge across a wide range of categories, topics, and difficulty levels.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Competitive Play</h3>
+            <p>Designed to reward fast thinking, sharp instincts, and consistent performance.</p>
+        </div>
+    </section>
+
+    <section class="product-preview fade-in fade-in-delay-3">
+
+        <h2>Preview</h2>
+
+        <div class="preview-row">
+
+            <img th:src="@{/images/thinkfast-preview1.jpg}" alt="ThinkFast Screenshot 1">
+            <img th:src="@{/images/thinkfast-preview2.jpg}" alt="ThinkFast Screenshot 2">
+            <img th:src="@{/images/thinkfast-preview3.jpg}" alt="ThinkFast Screenshot 3">
+
+        </div>
+
+    </section>
+    <section class="product-footer-cta">
+        <h2>Ready to test your knowledge?</h2>
+    </section>
+
+    <div class="product-links">
+        <a href="/privacy/thinkfast">View Privacy Policy</a>
+    </div>
+
+</main>
+<footer>
+    <div class="footer-left">
+        <span>© 2026 Orange Bear Studios</span>
+    </div>
+
+    <div class="footer-right">
+        <span class="footer-label">Follow Us</span>
+
+        <a href="mailto:support@orangebearstudios.com" class="email-link">
+            <img class="social-icon mail-icon" th:src="@{/icons/email.svg}" alt="Email">
+            support@orangebearstudios.com
+        </a>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/orangebear_studios" aria-label="Instagram">
+                <img class="social-icon" th:src="@{/icons/instagram.svg}" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/orangebearstudios/" aria-label="Facebook">
+                <img class="social-icon" th:src="@{/icons/facebook.svg}" alt="Facebook">
+            </a>
+
+            <a href="https://bsky.app/profile/orangebearstudios.bsky.social" aria-label="Bluesky">
+                <img class="social-icon" th:src="@{/icons/bluesky.svg}" alt="Bluesky">
+            </a>
+
+            <a href="https://x.com/OrangeBearStud" aria-label="Twitter (X)">
+                <img class="social-icon" th:src="@{/icons/twitter_x.svg}" alt="Twitter (X)">
+            </a>
+
+            <a href="https://tiktok.com/@orange.bear.studios" aria-label="TikTok">
+                <img class="social-icon" th:src="@{/icons/tiktok.svg}" alt="TikTok">
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

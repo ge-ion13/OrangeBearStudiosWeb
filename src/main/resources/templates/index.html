@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Bear Studios</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <img th:src="@{/images/orangebearstudios_logo.png}" alt="Orange Bear Studios Logo">
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+
+        <a href="/about-us">About Us</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Apps</button>
+            <div class="dropdown-content">
+                <a href="/apps/ridecare">RideCARE</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
+                <a href="/games/thinkfast">ThinkFast!</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <!-- Featured Showcase -->
+    <section class="showcase">
+        <div class="showcase-main">
+
+            <div class="showcase-slide active">
+                <div class="showcase-image">
+                    <img th:src="@{/images/thinkfast-banner.png}" alt="ThinkFast! Banner">
+                </div>
+
+                <div class="showcase-overlay">
+                    <h3>ThinkFast!</h3>
+                    <p>A fast-paced trivia challenge built for quick thinking and competitive play.</p>
+                    <a href="/games/thinkfast" class="showcase-btn">Explore Project</a>
+                </div>
+            </div>
+
+            <div class="showcase-slide">
+                <div class="showcase-image">
+                    <img th:src="@{/images/ridecare-banner.png}" alt="RideCARE Banner">
+                </div>
+
+                <div class="showcase-overlay">
+                    <h3>RideCARE</h3>
+                    <p>A smart vehicle management app built to simplify maintenance, fuel, and service tracking.</p>
+                    <a href="/apps/ridecare" class="showcase-btn">Explore Project</a>
+                </div>
+            </div>
+
+            <div class="showcase-slide">
+                <div class="showcase-image">
+                    <img th:src="@{/images/comingsoon-banner.png}" alt="Coming Soon Banner">
+                </div>
+
+                <div class="showcase-overlay">
+                    <h3>Coming Soon</h3>
+                    <p>More projects are currently in development and will be announced here soon.
+                        Contact us via email, or on our social links to find out more.</p>
+                    <a href="mailto:support@orangebearstudios.com" class="showcase-btn disabled">Stay Tuned</a>
+                </div>
+            </div>
+
+            <button class="showcase-arrow left" type="button" aria-label="Previous Project">&#10094;</button>
+            <button class="showcase-arrow right" type="button" aria-label="Next Project">&#10095;</button>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-left">
+        <span>© 2026 Orange Bear Studios</span>
+    </div>
+
+    <div class="footer-right">
+        <span class="footer-label">Follow Us</span>
+
+        <a href="mailto:support@orangebearstudios.com" class="email-link">
+            <img class="social-icon mail-icon" th:src="@{/icons/email.svg}" alt="Email">
+            support@orangebearstudios.com
+        </a>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/orangebear_studios" aria-label="Instagram">
+                <img class="social-icon" th:src="@{/icons/instagram.svg}" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/orangebearstudios/" aria-label="Facebook">
+                <img class="social-icon" th:src="@{/icons/facebook.svg}" alt="Facebook">
+            </a>
+
+            <a href="https://bsky.app/profile/orangebearstudios.bsky.social" aria-label="Bluesky">
+                <img class="social-icon" th:src="@{/icons/bluesky.svg}" alt="Bluesky">
+            </a>
+
+            <a href="https://x.com/OrangeBearStud" aria-label="Twitter (X)">
+                <img class="social-icon" th:src="@{/icons/twitter_x.svg}" alt="Twitter (X)">
+            </a>
+
+            <a href="https://tiktok.com/@orange.bear.studios" aria-label="TikTok">
+                <img class="social-icon" th:src="@{/icons/tiktok.svg}" alt="TikTok">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const slides = document.querySelectorAll(".showcase-slide");
+    const prevBtn = document.querySelector(".showcase-arrow.left");
+    const nextBtn = document.querySelector(".showcase-arrow.right");
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+</script>
+</body>
+</html>
