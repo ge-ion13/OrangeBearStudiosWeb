@@ -788,4 +788,16 @@ footer a:hover {
         padding: 24px;
         border-radius: 12px;
     }
+
+}
+
+.google-play-link {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.google-play-badge {
+    width: 180px;
+    height: auto;
+    display: block;
 }
